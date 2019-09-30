@@ -1,6 +1,6 @@
-baseURL                   = "https://example.com"
+baseURL                   = "https://www.zhengbigbig.top/"
 builddrafts                = false
-languageCode               = "zn-Hans"
+languageCode               = "zh-Hans"
 canonifyurls               = true
 contentdir                 = "content"
 layoutdir                  = "layouts"
