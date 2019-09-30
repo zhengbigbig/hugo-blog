@@ -1,0 +1,87 @@
+baseURL                   = "https://example.com"
+builddrafts                = false
+languageCode               = "zn-Hans"
+canonifyurls               = true
+contentdir                 = "content"
+layoutdir                  = "layouts"
+publishdir                 = "public"
+enableEmoji                = true
+hasCJKLanguage             = true
+summaryLength              = 200
+Paginate                   = 3
+
+theme                      = "AllinOne"
+title                      = "Bigbig Zheng"
+
+pygmentsuseclasses         = true
+
+
+[permalinks]
+  blog                     = "blog/:year-:month/:slug/"
+
+
+[taxonomies]
+  tag                      = "tags"
+  series                   = "series"
+  category                 = "categories"
+
+
+[menu]
+  [[menu.main]]
+    name                   = "Blog"
+    weight                 = -120
+    identifier             = "blog"
+    url                    = "blog/"
+
+  [[menu.main]]
+    name                   = "Contact"
+    weight                 = -110
+    identifier             = "contact"
+    url                    = "contact/"
+
+  [[menu.main]]
+    name                   = "About"
+    weight                 = -100
+    identifier             = "about"
+    url                    = "about/"
+
+
+
+[params]
+  faviconfile              = "img/zheng_new.png"               # from static/
+  avatar                   = "img/profile.jpeg"             # path to image in static dir e.g img/avatar.png
+  author                   = "郑志恒"
+  description              = ["生命不止，奋斗不息！", "Stay hungry. Stay foolish."]           # appears in the site header when set to a non-empty string
+  welcome_head             = "Hello, Friend"
+  welcome_word             = "❤️ Welcome to leave me a message ~ ❤️"
+
+  latestpostscount         = 5                             # how many posts to display on the home page
+  bloggroupby              = 'month'
+  dateform                 = "Jan 2, 2006"
+  dateformfull             = "2006-01-02  Monday  15:04:05"
+  noshowreadtime           = false                         # if true, don't show "<x> minutes read" in posts
+
+  # slides
+  slidesDirPath            = "themes/AllinOne/static/img/header-slides"    # path to image in local dir (path for hugo)
+  slidesDirPathURL         = "img/header-slides"    # path to image in static dir (for static pages)
+
+  # highlighting
+  highlightjs              = true
+
+  # latex
+  katex                    = true
+
+  # links
+  email                    = "780357902@qq.com"
+  github                   = "https://github.com/zhengbigbig"
+#  linkedin                 = "//linkedin.com/in/you"
+#  facebook                 = "//facebook.com/you"
+#  googleplus               = "//google.com/you"
+#  twitter                  = "//twitter.com/you"
+#  px500                    = "//px500"
+#  instagram                = "//instagram.com/you"
+  include_rss              = true                          # include RSS <link> tag in <head> and show RSS icon
+
+  # analytics
+  googleAnalytics          = "your-google-analytic-id"
+
