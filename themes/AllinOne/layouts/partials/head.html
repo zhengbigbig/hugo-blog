@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  
   {{ template "_internal/opengraph.html" . }}
 
   <title>
@@ -18,7 +17,6 @@
   </title>
 
   <link rel="canonical" href="{{ .Permalink }}">
-
   <!-- HTTPS -->
   {{ if .Site.Params.forcehttps }}
   <script type="text/javascript">
@@ -35,14 +33,20 @@
 
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
-  <link href="{{ "css/font.css" | absURL }}" rel="stylesheet"> 
-    
+  <link href="{{ "css/font.css" | absURL }}" rel="stylesheet">
+
   <!-- CSS -->
   <link href="{{ "css/vendors/bootstrap4/bootstrap.min.css" | absURL }}" rel="stylesheet">
-  <link href="{{ "css/vendors-extensions/mdb/mdb.min.css" | absURL }}" rel="stylesheet"> 
-  <link href="{{ "css/vendors/mdb/style.min.css" | absURL }}" rel="stylesheet"> 
+  <link href="{{ "css/vendors-extensions/mdb/mdb.min.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/vendors/mdb/style.min.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/search.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/remodal-default-theme.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/remodal.css" | absURL }}" rel="stylesheet">
   <link href="{{ "css/main.css" | absURL }}" rel="stylesheet">
 
+  <!--search-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
 
   <!-- Icon -->
   <link rel="shortcut icon"
@@ -69,13 +73,13 @@
 
 
   <!-- KaTeX -->
-  {{ if .Site.Params.katex }}  
+  {{ if .Site.Params.katex }}
     <link rel="stylesheet" href="{{ "js/vendors/katex/katex.min.css"| absURL }}">
   {{ end }}
   <!-- /.KaTeX -->
 
   <!-- Highlight -->
-  {{ if .Site.Params.highlightjs }}  
+  {{ if .Site.Params.highlightjs }}
     <link rel="stylesheet" href="{{ "css/vendors/highlight/github-gist.css"| absURL }}">
   {{ end }}
 

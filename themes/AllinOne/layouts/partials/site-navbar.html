@@ -4,38 +4,55 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
 
-      <!-- Brand -->
-      <a class="navbar-brand logo-flash" href="{{ .Site.BaseURL }}">
-          {{ if .Site.Params.avatar }}
-        <img src="{{ .Site.Params.faviconfile | absURL }}" style="width: auto;height: 40px;"  class="d-inline-block align-top" alt="" >
-        {{ end }}
-        <!--<strong> {{ .Site.Params.author }}</strong>-->
-      </a>
+        <!-- Brand -->
+        <a class="navbar-brand logo-flash" href="{{ .Site.BaseURL }}">
+            {{ if .Site.Params.avatar }}
+            <img src="{{ .Site.Params.faviconfile | absURL }}" style="width: auto;height: 40px;"
+                 class="d-inline-block align-top" alt="">
+            {{ end }}
+            <!--<strong> {{ .Site.Params.author }}</strong>-->
+        </a>
 
-      <!-- Collapse -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <!-- Left -->
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item {{ if eq $url "/" }} active {{ end }}">
-            <a class="nav-link" href="{{ .Site.BaseURL }}">Home{{ if eq $url "/" }} <span class="sr-only">(current)</span>{{ end }}</a>
-          </li>
-          {{ range .Site.Menus.main }}
-            <li class="nav-item {{ if eq $type (substr .URL 1 -1) }} active {{ end }}">
-              <a class="nav-link" href="{{ .URL | absURL }}" >{{ .Name }} {{ if eq $type (substr .URL 1 -1) }} <span class="sr-only">(current)</span>{{ end }} </a>
-            </li>
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item {{ if eq $url "/" }} active {{ end }}">
+                <a class="nav-link" href="{{ .Site.BaseURL }}">Home{{ if eq $url "/" }} <span
+                        class="sr-only">(current)</span>{{ end }}</a>
+                </li>
+                {{ range .Site.Menus.main }}
+                <li class="nav-item {{ if eq $type (substr .URL 1 -1) }} active {{ end }}">
+                    <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }} {{ if eq $type (substr .URL 1 -1) }}
+                        <span class="sr-only">(current)</span>{{ end }} </a>
+                </li>
 
-          {{ end }}
-        </ul>
-
-      </div>
-
+                {{ end }}
+                <a data-remodal-target="searchinput" class="nav-link">search</a>
+            </ul>
+        </div>
     </div>
-  </nav>
-  <!-- Navbar -->
+    <!--remodal 弹出层-->
+    <div class="remodal" data-remodal-id="searchinput" role="dialog" aria-labelledby="modal1Title"
+         aria-describedby="modal1Desc">
+        <!--预埋参数点，与 config.toml 配合-->
+        <span id="algoliaData" style="display:none;" data-appid="{{ .Site.Params.algolia.AppID}}"
+              data-searchkey="{{ .Site.Params.algolia.SearchKey}}"
+              data-initindex="{{ .Site.Params.algolia.initIndex}}"></span>
+
+        <div class="search-input-card">
+            <input type="search" id="search-input" class="search-input" placeholder="站内搜索"
+                   name="search" autocomplete="off"/>
+            <span class="input-search-icon"><i class="fa fa-search"></i></span>
+        </div>
+    </div>
+</nav>
+<!-- Navbar -->

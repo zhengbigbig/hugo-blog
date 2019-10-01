@@ -8,7 +8,11 @@
 <!-- jquery -->
 <script type="text/javascript" src="{{ "js/vendors/jquery/jquery-3.3.1.min.js" | absURL }}"></script><!-- <script>window.jQuery || document.write('<script src="dist/js/vendors/jquery-slim.min.js"><\/script>')</script> -->
 <script type="text/javascript" src="{{ "js/vendors/jquery/jquery.smooth-scroll.min.js" | absURL }}"></script>
-<!-- /.jquery -->
+<script type="text/javascript" src="{{ "js/vendors/remodal.js" | absURL }}"></script>
+<script type="text/javascript" src="{{ "js/vendors/remodal.min.js" | absURL }}"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.30.0/algoliasearch.jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.32.0/autocomplete.jquery.min.js"></script>
 
 
 <script type="text/javascript" src="{{ "js/vendors/popper.min.js" | absURL }}"></script>
@@ -17,18 +21,26 @@
 
 <script type="text/javascript" src="{{ "js/vendors/mdb/mdb.min.js" | absURL }}"></script>
 
+<script type="text/javascript" src="{{ "js/vendors/three.min.js" | absURL }}"></script>
+
+<script type="text/javascript" src="{{ "js/vendors/pipizhen/breathing-halftone.pkgd.js" | absURL }}"></script>
+
+<script type="text/javascript" src="{{ "js/vendors/pipizhen/scripts.js" | absURL }}"></script>
+
+<script type="text/javascript" src="{{ "js/vendors/search.js" | absURL }}"></script>
+
 <script type="text/javascript" src="{{ "js/main.js" | absURL }}"></script>
 
 
 <!-- Highlight -->
-{{ if .Site.Params.highlightjs }}  
+{{ if .Site.Params.highlightjs }}
   <script src="{{ "js/vendors/highlight.pack.js" | absURL }}"> </script>
   <script>hljs.initHighlightingOnLoad();</script>
 {{ end }}
 <!-- /.Highlight -->
 
 <!-- KaTeX -->
-{{ if .Site.Params.katex }} 
+{{ if .Site.Params.katex }}
   <script src="{{ "js/vendors/katex/katex.min.js" | absURL }}"> </script>
   <script src="{{ "js/vendors/katex/contrib/auto-render.min.js" | absURL }}"></script>
 

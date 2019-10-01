@@ -6,6 +6,6 @@ title = "Contact"
 +++
 
 
-<img src="/img/weixin.jpeg" width="200px">  
-<img src="/img/qq.jpeg" width="200px">
+<center><img src="/img/weixin.jpeg" width="200px"></center>  
+<center><img src="/img/qq.jpeg" width="200px"></center>
 
