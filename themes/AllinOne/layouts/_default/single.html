@@ -2,7 +2,7 @@
 {{ define "main" }}
   <!-- Main layout -->
   <main class="post-main-wrapper">
-    
+
     <!-- Grid row -->
     <div class="row">
 
@@ -41,6 +41,16 @@
           </div>
           <!-- /.Tags -->
 
+          <div class="post-comment">
+            {{ if ( .Params.showComments | default true ) }}
+            {{ if ne .Site.DisqusShortname "" }}
+            {{ template "_internal/disqus.html" . }}
+            {{ end }}
+            {{ end }}
+            <!-- Comments -->
+            {{ partial "comments.html" . }}
+          </div>
+
           <!-- Prev & Next -->
           <div class="row pt-3">
             <div class="col-md-6">
@@ -53,7 +63,7 @@
                 </a>
               {{ end }}
             </div>
-            
+
             <div class="col-md-6 text-right" >
               {{ if .NextInSection }}
                 <a href={{ .NextInSection.Permalink }} class="post-meta">{{ i18n "nextPost" }}

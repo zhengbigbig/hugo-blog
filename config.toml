@@ -85,3 +85,8 @@ pygmentsuseclasses         = true
   # analytics
   googleAnalytics          = "your-google-analytic-id"
 
+[params.utterances]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
+owner = "zhengbigbig" # github用户名
+repo = "hugo-comments"    # 仓库地址The repo to store comments
+issueTerm = "pathname"
+theme = "github-light"
