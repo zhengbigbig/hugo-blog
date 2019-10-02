@@ -18,5 +18,10 @@
   translation: "下一篇"
 
 - id: postCount
-  translation: "共有{{ .Count }}篇文章"
+  translation:
+    one: "共有一篇文章"
+    other: "共有{{ .Count }}篇文章"
+
+
+
 

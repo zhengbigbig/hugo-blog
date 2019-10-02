@@ -1,18 +1,12 @@
 +++
-date = "2018-09-13T22:31:21+08:00"
+date = "2018-09-30T22:31:21+08:00"
 draft = false
-title = "Blog"
+title = "博客"
 
 +++
 
-`Blog` is the place to record my life. There are 5 categories in `Blog` section:
+`Blog` is the place to record my life. 
 
-- Thoughts: My thoughts and attitude to everything in my life.
-
-- Critique: My reviews, especially to musicals, movies, etc.
-
-- Travel: My travel notes.
-
-- Moment: Some moments that I feel something and eager to write it down. Fragments in my life. Short memos.
-
-- Gallery: Pictures I'd like to share. My favourite ones.
+- 博客将记录我生活的点点滴滴，以及我对一切事物的看法
+- 记录我前后端的学习经验以及其他的一些经历
+- 更多

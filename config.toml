@@ -1,6 +1,8 @@
 baseURL                   = "https://www.zhengbigbig.top/"
 builddrafts                = false
-languageCode               = "zh-Hans"
+languageCode = "en"
+
+
 canonifyurls               = true
 contentdir                 = "content"
 layoutdir                  = "layouts"
@@ -14,6 +16,7 @@ theme                      = "AllinOne"
 title                      = "Bigbig Zheng"
 
 pygmentsuseclasses         = true
+
 
 
 [permalinks]
@@ -57,7 +60,7 @@ pygmentsuseclasses         = true
 
   latestpostscount         = 5                             # how many posts to display on the home page
   bloggroupby              = 'month'
-  dateform                 = "Jan 2, 2006"
+  dateform                 = "2006-01-02 Monday 15:04:05"
   dateformfull             = "2006-01-02  Monday  15:04:05"
   noshowreadtime           = false                         # if true, don't show "<x> minutes read" in posts
 
@@ -90,3 +93,5 @@ owner = "zhengbigbig" # github用户名
 repo = "hugo-comments"    # 仓库地址The repo to store comments
 issueTerm = "pathname"
 theme = "github-light"
+
+
